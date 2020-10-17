@@ -1,0 +1,18 @@
+.easytree-submenu-heading {
+    cursor: pointer;
+}
+ul.easytree {
+    list-style: none;
+}
+ul.easytree-submenu-items {
+    list-style: none;
+    border-left: 1px dashed black;
+}
+span.easytree-submenu-heading.collapsed:before {
+    content: "+";
+    margin-right: 4px;
+}
+span.easytree-submenu-heading.expanded:before {
+    content: "-";
+    margin-right: 4px;
+}

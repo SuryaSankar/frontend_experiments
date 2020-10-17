@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/plain-css-nested-menu.css')}}">
+    <title>Hello Plain CSS World!</title>
+  </head>
+  <body>
+    <div id="easytree">
+      <ul class="easytree">
+        <li>
+          <span class="easytree-submenu-heading">Metrics</span>
+          <ul class="easytree-submenu-items">
+            <li>
+              <span class="easytree-submenu-heading">Daily Metrics</span>
+              <ul class="easytree-submenu-items">
+                <li>
+                  <span class="easytree-submenu-heading">Daily Order Metrics</span>
+                  <ul class="easytree-submenu-items">
+                    <li>
+                      <span class="easytree-submenu-heading">Categorywise Daily order metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Categorywise daily order count</a>
+                        </li>
+                        <li>
+                          <a href="">Categorywise daily bookings</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="easytree-submenu-heading">Storewise Daily order metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Storewise daily order count</a>
+                        </li>
+                        <li>
+                          <a href="">Storewise daily bookings</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="easytree-submenu-heading">Daily Invoice Metrics</span>
+                  <ul class="easytree-submenu-items">
+                    <li>
+                      <span class="easytree-submenu-heading">Categorywise Daily invoice metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Categorywise daily invoice count</a>
+                        </li>
+                        <li>
+                          <a href="">Categorywise daily revenue</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="easytree-submenu-heading">Storewise Daily invoice metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Storewise daily invoice count</a>
+                        </li>
+                        <li>
+                          <a href="">Storewise daily revenue</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="easytree-submenu-heading">Monthly Metrics</span>
+              <ul class="easytree-submenu-items">
+                <li>
+                  <span class="easytree-submenu-heading">Monthly Order Metrics</span>
+                  <ul class="easytree-submenu-items">
+                    <li>
+                      <span class="easytree-submenu-heading">Categorywise Monthly order metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Categorywise monthly order count</a>
+                        </li>
+                        <li>
+                          <a href="">Categorywise monthly bookings</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="easytree-submenu-heading">Storewise Monthly order metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Storewise monthly order count</a>
+                        </li>
+                        <li>
+                          <a href="">Storewise monthly bookings</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="easytree-submenu-heading">Monthly Invoice Metrics</span>
+                  <ul class="easytree-submenu-items">
+                    <li>
+                      <span class="easytree-submenu-heading">Categorywise Monthly invoice metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Categorywise monthly invoice count</a>
+                        </li>
+                        <li>
+                          <a href="">Categorywise monthly revenue</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="easytree-submenu-heading">Storewise Monthly invoice metrics</span>
+                      <ul class="easytree-submenu-items">
+                        <li>
+                          <a href="">Storewise monthly invoice count</a>
+                        </li>
+                        <li>
+                          <a href="">Storewise monthly revenue</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="easytree-submenu-heading">Settings</span>
+          <ul class="easytree-submenu-items">
+            <li>
+              <span class="easytree-submenu-heading">Personal Settings</span>
+              <ul class="easytree-submenu-items">
+                <li><a href="">Password Settings</a></li>
+                <li><a href="">Viewing Preferences</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="easytree-submenu-heading">Org Settings</span>
+              <ul class="easytree-submenu-items">
+                <li><a href="">Teams</a></li>
+                <li><a href="">Billing</a></li>
+              </ul>
+            </li>
+          </ul>
+      </ul>
+
+    </div>
+    <script>
+      const navRoot = document.getElementById("easytree");
+      const subMenuHeadings = document.getElementsByClassName("easytree-submenu-heading");
+      Array.from(subMenuHeadings).forEach(function(subMenuHeading){
+        subMenuHeading.classList.add("expanded");
+        subMenuHeading.addEventListener('click', function(evt){
+          const subMenuList = evt.target.nextElementSibling;
+          if(subMenuList.style.display=="none"){
+            subMenuHeading.classList.remove("collapsed");
+            subMenuHeading.classList.add("expanded");
+            subMenuList.style.display = "block";
+          }
+          else {
+            subMenuHeading.classList.remove("expanded");
+            subMenuHeading.classList.add("collapsed");
+            subMenuList.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
