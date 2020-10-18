@@ -7,6 +7,8 @@ ul.easytree {
 ul.easytree-submenu-items {
     list-style: none;
     border-left: 1px dashed black;
+    white-space: nowrap;
+    margin-right: 4px;
 }
 span.easytree-submenu-heading.collapsed:before {
     content: "+";
@@ -15,4 +17,10 @@ span.easytree-submenu-heading.collapsed:before {
 span.easytree-submenu-heading.expanded:before {
     content: "-";
     margin-right: 4px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-width: 800px;
+    overflow-y: hidden;
 }
