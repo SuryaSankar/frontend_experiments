@@ -9,12 +9,13 @@ ul.easytree-submenu-items {
     border-left: 1px dashed black;
     white-space: nowrap;
     margin-right: 4px;
+    padding-left: 20px;
 }
-span.easytree-submenu-heading.collapsed:before {
+div.easytree-submenu-heading.collapsed:before {
     content: "+";
     margin-right: 4px;
 }
-span.easytree-submenu-heading.expanded:before {
+div.easytree-submenu-heading.expanded:before {
     content: "-";
     margin-right: 4px;
 }
